@@ -54,7 +54,7 @@ export class Widget extends Base {
     super()
     this.element.classList.add('wwidget')
     this.element.innerHTML = html as unknown as string
-    document.body.append(this.element)
+    this.appendToBody(this.element)
 
     this.populateElementsWithSelector(this.element, {
       $wopenButton: '.wopen-button',

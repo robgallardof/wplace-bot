@@ -20,6 +20,22 @@ export class Base {
     }
   }
 
+  /** Safely append element to document body when available. */
+  protected appendToBody(element: HTMLElement): void {
+    const append = () => {
+      document.body?.append(element)
+    }
+    if (document.body) {
+      append()
+      return
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', append, { once: true })
+      return
+    }
+    append()
+  }
+
   /**
    * Register autocleared event handler.
    * If using classes methods don't forget to `bind(this)`
