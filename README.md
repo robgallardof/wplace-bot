@@ -11,12 +11,10 @@
 
 ## Installation
 
-1. Install TamperMonkey browser extension: [Chrome](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en)|[Firefox](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
-2. [Open this link](https://github.com/SoundOfTheSky/wplace-bot/raw/refs/heads/main/dist.user.js)
-3. Press install
-4. Allow user scripts
-   1. Chrome: Settings>Extensions>Manage Extensions>Tampermonkey>Details>Allow User Scripts
-   2. Firefox: Settings>Extensions and Themes>Tampermonkey>Allow User Scripts
+1. Install dependencies: `bun i`
+2. Build the Firefox extension: `bun start`
+3. Load the unpacked extension from `dist/extension`
+   1. Firefox: `about:debugging#/runtime/this-firefox` → "Load Temporary Add-on"
 
 ## How to use
 
