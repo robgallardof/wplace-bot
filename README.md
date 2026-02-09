@@ -16,6 +16,17 @@
 3. Load the unpacked extension from `dist/extension`
    1. Firefox: `about:debugging#/runtime/this-firefox` → "Load Temporary Add-on"
 
+### Instalación sin ZIP (manual)
+
+Si no puedes instalar un ZIP o no tienes el archivo comprimido, usa la extensión sin empaquetar:
+
+1. Instala dependencias: `bun i`
+2. Compila la extensión: `bun start`
+3. Abre Firefox y ve a `about:debugging#/runtime/this-firefox`
+4. Pulsa **"Load Temporary Add-on"** y selecciona el archivo `manifest.json` dentro de `dist/extension`
+
+> Esto carga la extensión directamente desde la carpeta generada, sin necesidad de ZIP.
+
 ## How to use
 
 1. Add your image or exported "###.wbot" files.
