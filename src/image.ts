@@ -102,7 +102,7 @@ export class BotImage extends Base {
     super()
     this.element.innerHTML = html as unknown as string
     this.element.classList.add('wimage')
-    document.body.append(this.element)
+    this.appendToBody(this.element)
 
     this.populateElementsWithSelector(this.element, {
       $brightness: '.brightness',
@@ -549,7 +549,7 @@ export class BotImage extends Base {
   /** export image */
   protected export() {
     const a = document.createElement('a')
-    document.body.append(a)
+    this.appendToBody(a)
     a.href = URL.createObjectURL(
       new Blob([JSON.stringify(this.toJSON())], { type: 'application/json' }),
     )
